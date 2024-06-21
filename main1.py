@@ -6,7 +6,7 @@ def setup_database():
     conn = sqlite3.connect('datatest.db')
     cursor = conn.cursor()
 
-    # Execute the SQL commands from your main.sql file
+    # Execute the SQL commands from main.sql file
     with open('main.sql', 'r') as file:
         sql = file.read()
         cursor.executescript(sql)
